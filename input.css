@@ -2,14 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url('fonts/cormorant-garamond-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url('fonts/cormorant-garamond-normal.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('fonts/dm-sans-normal.woff2') format('woff2');
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FDFAF4;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #C8973A;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A07828;
+  }
+}
+
 @layer components {
-    .fade-in {
-        @apply opacity-0 translate-y-5 transition-all duration-[0.8s] ease-out;
-    }
-    .fade-in.visible {
-        @apply opacity-100 translate-y-0;
-    }
-    .hero-gradient {
-        background: linear-gradient(135deg, rgba(26, 60, 52, 0.9) 0%, rgba(123, 140, 124, 0.8) 100%);
-    }
+  .font-accent {
+    font-style: italic;
+  }
+  .text-glow {
+    text-shadow: 0 0 10px rgba(200, 151, 58, 0.2);
+  }
+  .bg-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .line-connector {
+    @apply relative;
+  }
+  .line-connector::after {
+    content: '';
+    @apply absolute top-1/2 left-0 w-0 h-[1px] bg-primary-gold -z-10;
+  }
+  .line-connector.animate::after {
+    @apply animate-connector;
+  }
 }
