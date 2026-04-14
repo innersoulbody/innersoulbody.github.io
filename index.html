@@ -3,8 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inner Soul Body — Praktek Dokter Akupunktur Medik & Hipnoterapi</title>
-    <!-- Tailwind CSS (Local Build) -->
+
+    <!-- Primary Meta -->
+    <title>Inner Soul Body — Akupunktur Medik & Hipnoterapi Tangerang</title>
+    <meta name="description" content="Praktek dokter akupunktur medik dan hipnoterapi di Tangerang. Menangani nyeri, insomnia, kecemasan, anxiety, trauma, dan pasca stroke. Konsultasi dengan perjanjian.">
+    <meta name="keywords" content="akupunktur tangerang, hipnoterapi tangerang, dokter akupunktur, terapi nyeri, insomnia, kecemasan, anxiety, pasca stroke, citra raya">
+    <meta name="author" content="Inner Soul Body">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.innersoubody.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.innersoulbody.com/">
+    <meta property="og:title" content="Inner Soul Body — Akupunktur Medik & Hipnoterapi Tangerang">
+    <meta property="og:description" content="Pemulihan tubuh dan jiwa dengan pendekatan medis holistik. Ditangani dokter bersertifikasi di Tangerang.">
+    <meta property="og:image" content="https://www.innersoulbody.com/og-image.jpg">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Inner Soul Body">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Inner Soul Body — Akupunktur Medik & Hipnoterapi Tangerang">
+    <meta name="twitter:description" content="Pemulihan tubuh dan jiwa dengan pendekatan medis holistik di Tangerang.">
+    <meta name="twitter:image" content="https://www.innersoulbody.com/og-image.png">
+
+    <!-- Schema: LocalBusiness + MedicalClinic -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Inner Soul Body",
+      "alternateName": "Inner Soul Body — Praktek Dokter Akupunktur Hipnoterapi",
+      "description": "Praktek dokter akupunktur medik dan hipnoterapi untuk pemulihan tubuh dan jiwa secara holistik.",
+      "url": "https://www.innersoulbody.com",
+      "telephone": "+6281949598980",
+      "email": "",
+      "image": "https://www.innersoulbody.com/og-image.jpg",
+      "priceRange": "Rp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ruko Garden Boulevard M23, Jl. Citra Raya Boulevard No.207, Ciakar",
+        "addressLocality": "Tangerang",
+        "addressRegion": "Banten",
+        "postalCode": "15170",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.2744287,
+        "longitude": 106.5306487
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "14:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.google.com/maps/place/Inner+Soul+Body"
+      ],
+      "medicalSpecialty": [
+        "Acupuncture",
+        "Hypnotherapy"
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Akupunktur Medik",
+          "description": "Stimulasi titik akupunktur untuk meredakan nyeri, insomnia, migrain, dan pemulihan pasca stroke."
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Hipnoterapi",
+          "description": "Terapi bawah sadar untuk mengatasi anxiety, trauma, fobia, dan gangguan psikosomatis."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="overflow-x-hidden font-sans bg-cream-white text-dark-brown">
@@ -228,7 +311,7 @@
                         </svg>
                     </div>
                     
-                    <h3 class="mb-6 font-serif text-3xl font-bold text-dark-brown">Hipnoterapi Klinis</h3>
+                    <h3 class="mb-6 font-serif text-3xl font-bold text-dark-brown">Hipnoterapi</h3>
                     <p class="mb-8 leading-relaxed text-dark-brown/70">
                         Terapi komunikasi bawah sadar untuk menjangkau akar masalah psikologis, mengubah pola pikir negatif, dan meningkatkan kontrol diri.
                     </p>
@@ -576,8 +659,7 @@
             <div class="h-[1px] bg-white/10 w-full mb-12"></div>
 
             <div class="flex flex-col justify-between items-center text-sm md:flex-row">
-                <p>&copy; 2026 Inner Soul Body. All rights reserved.</p>
-                
+                <p>&copy; <span id="year"></span> Inner Soul Body. All rights reserved.</p>                
                 <div class="flex items-center mt-6 space-x-2 md:mt-0">
                     <span class="text-primary-gold">✦</span>
                     <span class="font-serif italic">A healthy mind in a healthy body</span>
@@ -654,6 +736,8 @@
                 });
             });
         });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
